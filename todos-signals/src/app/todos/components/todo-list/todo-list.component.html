@@ -1,0 +1,11 @@
+<h2>Todos <button mat-button (click)="addTodo()" color="primary">Add</button></h2>
+<div class ="todo" *ngFor="let todo of todos$()">
+  <div class="description">
+    <div>Id: {{todo.id}}</div>
+    <div>Task: {{todo.task}}</div>
+  </div>
+  <div>
+    <mat-checkbox [(ngModel)]="todo.done" (ngModelChange)="markTodo(todo)">Done</mat-checkbox>
+    <button mat-button (click)="removeTodo(todo)" color="warn">Remove</button>
+  </div>
+</div>

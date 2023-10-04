@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Task</mat-label>
+  <input matInput [(ngModel)]="task">
+</mat-form-field>
+<div class="buttons">
+  <button mat-button (click)="add()" color="primary">Add</button>
+  <button mat-button mat-dialog-close color="warn">Close</button>
+</div>
